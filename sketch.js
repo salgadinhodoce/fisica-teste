@@ -7,6 +7,7 @@ var world;
 var bola;
 var solo;
 var retangulo; 
+var quadrado;
 
 function setup(){
 
@@ -20,7 +21,7 @@ var propriedadesdabola={
 
 
 frictionAir:0.05,
-desntity:30
+density:30
 
 
 
@@ -34,11 +35,22 @@ desntity:30
 
 }
 
+var propriedadesdoquadrado={
+
+frictionAir:0.04,
+density:30
+
+
+}
+
 retangulo=Bodies.rectangle(100,300,70,40,propriedadesdoretangulo);
 World.add(world,retangulo);
 
 bola=Bodies.circle(300,300,10,propriedadesdabola);
 World.add(world,bola);
+
+quadrado=Bodies.rectangle(200,300,20,20,propriedadesdoquadrado);
+World.add(world,quadrado)
 
 var propriedadesdosolo={
 
@@ -65,6 +77,7 @@ ellipseMode(RADIUS);
 ellipse(bola.position.x,bola.position.y,10);
 rect(solo.position.x,solo.position.y,800,10);
 rect(retangulo.position.x,retangulo.position.y,70,40);
+rect(quadrado.position.x,quadrado.position.y,20,20);
 
 }
 
